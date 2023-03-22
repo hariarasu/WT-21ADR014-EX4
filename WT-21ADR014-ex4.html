@@ -1,0 +1,88 @@
+# WT-21ADR014-EX4
+<html>
+
+<head>
+
+</head>
+
+<body style="background-color: coral;">
+  <h2 style="text-align: center;color: blue;">GPA Calculator</h2>
+  <style>
+    table {
+      margin: 90px auto;
+      padding: 5px;
+      text-align: center;
+      border: 3px solid;
+      border-radius: 50px;
+      border-spacing: 10px;
+      background: white;
+    }
+
+    td {
+      padding: 10px;
+      border: 0px solid;
+      border-radius: 15px;
+    }
+
+    .te {
+      height: 100px;
+      margin: 10px;
+      ;
+    }
+  </style>
+  <form action="" name="form1">
+    <table>
+      <tr>
+        <th>Course Name</th>
+        <th>Credits</th>
+        <th>Grade</th>
+      </tr>
+      <tr>
+        <td><input type="text" name=sub1"></td>
+        <td><input type="text" id="cred1"></td>
+        <td><input type="text" id="grd1"></td>
+      </tr>
+      <tr>
+        <td><input type="text" id="sub2"></td>
+        <td><input type="text" id="cred2"></td>
+        <td><input type="text" id="grd2"></td>
+      </tr>
+      <tr>
+        <td><input type="text" id="sub3"></td>
+        <td><input type="text" id="cred3"></td>
+        <td><input type="text" id="grd3"></td>
+      </tr>
+      <tr>
+        <td><input type="text" id="sub4"></td>
+        <td><input type="text" id="cred4"></td>
+        <td><input type="text" id="grd4"></td>
+      </tr>
+      <tr>
+        <td><input type="text" id="sub5"></td>
+        <td><input type="text" id="cred5"></td>
+        <td><input type="text" id="grd5"></td>
+      </tr>
+      <tr>
+        <td rowspan="2"></td>
+        <td>
+          <div><input type="button" value="Calculate GPA" onclick="gpaCalc()"></div>
+        </td>
+  
+      </tr>
+    </table>
+  </form>
+  <p class="te" style="text-align:center;margin-bottom:10px;">Your GPA is: <span id="result"></span></p>
+</body>
+<script>
+    function gpaCalc(){
+      var grades=[];
+      var credit =[];
+      var a=['O','A+','A','B+','B','C'];
+      var b=[10,9,8,7,6,5];
+      grades[0]=document.form1.sub1.value;
+      console.log(grades[0]);
+
+}
+</script>
+
+</html>
