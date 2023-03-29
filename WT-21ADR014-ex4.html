@@ -2,87 +2,178 @@
 <html>
 
 <head>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body style="background-color: coral;">
+<body style="background-color:rgb(27, 196, 55);">
   <h2 style="text-align: center;color: blue;">GPA Calculator</h2>
   <style>
     table {
-      margin: 90px auto;
+      margin: 50px auto;
       padding: 5px;
       text-align: center;
-      border: 3px solid;
       border-radius: 50px;
-      border-spacing: 10px;
+      border-spacing: 1px;
       background: white;
+      width: 40%;
+      background-color:gold;
     }
-
     td {
-      padding: 10px;
-      border: 0px solid;
-      border-radius: 15px;
+      padding: 15px;
     }
+    option:checked {
+      color: darkblue;
+      background: red;
+      font-style: italic;
+      font-weight: bold;
+   }
+   ::placeholder {
+      color: rgb(90, 5, 248);
+      opacity: 1;
+}
 
-    .te {
-      height: 100px;
-      margin: 10px;
-      ;
-    }
   </style>
   <form action="" name="form1">
     <table>
       <tr>
-        <th>Course Name</th>
-        <th>Credits</th>
-        <th>Grade</th>
+        <td><b>Course Name</b></td>
+        <td><b>Credits</b></td>
+        <td><b>Grade</b></td>
       </tr>
       <tr>
-        <td><input type="text" name=sub1"></td>
-        <td><input type="text" id="cred1"></td>
-        <td><input type="text" id="grd1"></td>
+        <td><input type="text" name="sub1" placeholder="subject1"></td>
+        <td><select class="form-control" id="credits1">
+          <option value="1.0">1</option>
+					<option value="2.0">2</option>
+					<option value="3.0">3</option>
+					<option value="4.0">4</option>
+					<option value="5.0">5</option>
+				</select></td>
+
+        <td><select class="form-control" id="grade1">
+          <option value="10.0">O</option>
+					<option value="9.0">A+</option>
+					<option value="8.0">A</option>
+					<option value="7.0">B+</option>
+					<option value="6.0">B</option>
+					<option value="5.0">C</option>
+					<option value="0.0">U</option>
+				</select></td>
       </tr>
       <tr>
-        <td><input type="text" id="sub2"></td>
-        <td><input type="text" id="cred2"></td>
-        <td><input type="text" id="grd2"></td>
+        <td><input type="text" name="sub2" placeholder="subject2"></td>
+        <td><select class="form-control" id="credits2">
+          <option value="1.0">1</option>
+					<option value="2.0">2</option>
+					<option value="3.0">3</option>
+					<option value="4.0">4</option>
+					<option value="5.0">5</option>
+				</select></td>
+
+        <td><select class="form-control" id="grade2">
+					<option value="10.0">O</option>
+					<option value="9.0">A+</option>
+					<option value="8.0">A</option>
+					<option value="7.0">B+</option>
+					<option value="6.0">B</option>
+					<option value="5.0">C</option>
+					<option value="0.0">U</option>
+				</select></td>
       </tr>
       <tr>
-        <td><input type="text" id="sub3"></td>
-        <td><input type="text" id="cred3"></td>
-        <td><input type="text" id="grd3"></td>
+        <td><input type="text" name="sub3" placeholder="subject3"></td>
+        <td><select class="form-control" id="credits3">
+          <option value="1.0">1</option>
+					<option value="2.0">2</option>
+					<option value="3.0">3</option>
+					<option value="4.0">4</option>
+					<option value="5.0">5</option>
+				</select></td>
+
+        <td><select class="form-control" id="grade3">
+          <option value="10.0">O</option>
+					<option value="9.0">A+</option>
+					<option value="8.0">A</option>
+					<option value="7.0">B+</option>
+					<option value="6.0">B</option>
+					<option value="5.0">C</option>
+					<option value="0.0">U</option>
+				</select></td>
       </tr>
       <tr>
-        <td><input type="text" id="sub4"></td>
-        <td><input type="text" id="cred4"></td>
-        <td><input type="text" id="grd4"></td>
+        <td><input type="text" name="sub4" placeholder="subject4"></td>
+        <td><select class="form-control" id="credits4">
+					<option value="1.0">1</option>
+					<option value="2.0">2</option>
+					<option value="3.0">3</option>
+					<option value="4.0">4</option>
+					<option value="5.0">5</option>
+				</select></td>
+
+        <td><select class="form-control" id="grade4">
+					<option value="10.0">O</option>
+					<option value="9.0">A+</option>
+					<option value="8.0">A</option>
+					<option value="7.0">B+</option>
+					<option value="6.0">B</option>
+					<option value="5.0">C</option>
+					<option value="0.0">U</option>
+				</select></td>
       </tr>
       <tr>
-        <td><input type="text" id="sub5"></td>
-        <td><input type="text" id="cred5"></td>
-        <td><input type="text" id="grd5"></td>
+        <td><input type="text" name="sub5" placeholder="subject5"></td>
+        <td><select class="form-control" id="credits5">
+					<option value="1.0">1</option>
+					<option value="2.0">2</option>
+					<option value="3.0">3</option>
+					<option value="4.0">4</option>
+					<option value="5.0">5</option>
+				</select></td>
+
+        <td><select class="form-control" id="grade5" >
+					<option value="10.0">O</option>
+					<option value="9.0">A+</option>
+					<option value="8.0">A</option>
+					<option value="7.0">B+</option>
+					<option value="6.0">B</option>
+					<option value="5.0">C</option>
+					<option value="0.0">U</option>
+				</select></td>
       </tr>
       <tr>
-        <td rowspan="2"></td>
-        <td>
-          <div><input type="button" value="Calculate GPA" onclick="gpaCalc()"></div>
-        </td>
-  
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
     </table>
   </form>
-  <p class="te" style="text-align:center;margin-bottom:10px;">Your GPA is: <span id="result"></span></p>
+    <div style="text-align: center;"><button type="button" class="btn btn-primary" onclick="calculateGPA()">Calculate GPA</button></div>
+        <h2 style="text-align: center;">Your GPA: <span id="gpa"></span></h2>
+  
 </body>
 <script>
-    function gpaCalc(){
-      var grades=[];
-      var credit =[];
-      var a=['O','A+','A','B+','B','C'];
-      var b=[10,9,8,7,6,5];
-      grades[0]=document.form1.sub1.value;
-      console.log(grades[0]);
+  function calculateGPA() {
 
+var credits1 = document.getElementById("credits1").value;
+var credits2 = document.getElementById("credits2").value;
+var credits3 = document.getElementById("credits3").value;
+var credits4 = document.getElementById("credits4").value;
+var credits5 = document.getElementById("credits5").value;
+var grade1 = document.getElementById("grade1").value;
+var grade2 = document.getElementById("grade2").value;
+var grade3 = document.getElementById("grade3").value;
+var grade4 = document.getElementById("grade4").value;
+var grade5 = document.getElementById("grade5").value;
+
+var gpa = ((credits1 * grade1) + (credits2 * grade2) + (credits3 * grade3) + (credits4 * grade4)+ (credits5 * grade5)) / (parseInt(credits1) + parseInt(credits2) + parseInt(credits3)+ parseInt(credits4)+ parseInt(credits5));
+
+gpa = gpa.toFixed(2);
+
+document.getElementById("gpa").innerHTML = gpa;
 }
+
 </script>
 
 </html>
